@@ -1,6 +1,11 @@
+import Person from "./models/Person.js";
+
 async function getPersons(req,res) {
-  res.send('Persons resource');
-}
+  Person.find({}).then((person) => {
+    res.send('Persons resource');
+  })
+}  
+  
 async function getPerson(req,res) {
   res.send('Persons resource');
 }
