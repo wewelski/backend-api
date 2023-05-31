@@ -1,12 +1,12 @@
 import app from "./app.js";
 import config from "./utils/config.js";
 
-const PORT = process.env.PORT || 8080;
+const PORT = config.PORT;
 
 app.get('/',(req,res) => {
   res.send('Hello World!');
 })
 
-app.listen(config.PORT, () => {
-  console.log(`Listening to port: ${config.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Listening to port: ${PORT}`);
 });
